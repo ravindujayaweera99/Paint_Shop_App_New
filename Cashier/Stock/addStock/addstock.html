@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Add Item</title>
+  <link rel="stylesheet" type="text/css" href="addstock.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <h3>Ananda Paint Center</h3>
+  </div>
+
+  <div class="bc">
+    <nav>
+      <a href="../../cashier.php">Cashier Panel</a>
+      <a href="../../billing/billing.php">Billing</a>
+      <a href="../stock.html">Stock</a>
+      <a href="../../purchases/purchases.php">Purchases</a>
+      <a href="../../quotation/quotation.php">Quotation</a>
+      <span class="log-out"><a href="../../../login/logout.php">Log Out</a></span>
+    </nav>
+
+    <div class="bc">
+      <div class="container">
+        <h1>Add Item</h1>
+        <form action="addstock.php" method="POST">
+          <label for="itemCode">Item Code:</label>
+          <input type="text" id="itemCode" name="itemcode" required>
+
+          <label for="supplier">Supplier</label>
+          <input type="text" id="supplier" name="supplier" required>
+
+          <label for="Name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="type">Item Type:</label>
+          <input type="text" id="type" name="type" required>
+
+          <label for="volume">Volume (in L):</label>
+          <input type="text" id="volume" name="volume" required>
+
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" required>
+
+          <label for="minqty">Minimum Quantity:</label>
+          <input type="text" id="minqty" name="minqty" required>
+
+          <label for="unitprice">Unit Price:</label>
+          <input type="number" id="unitprice" name="unitprice" oninput="calculateNetValue()" required>
+
+          <label for="discount">Discount:</label>
+          <input type="number" id="discount" name="discount" oninput="calculateNetValue()" required>
+
+          <label for="netvalue">Net Value:</label>
+          <input type="number" id="netvalue" name="netvalue" readonly>
+
+          <input type="submit" value="Add">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h3>Copyright</h3>
+  </div>
+
+  <script src="stock.js"></script>
+
+  <script>
+    function validateForm() {
+      // Validate supplier, item name, and item type (accepts only text)
+      var supplier = document.getElementById("supplier").value;
+      var itemName = document.getElementById("name").value;
+      var itemType = document.getElementById("type").value;
+      var textRegex = /^[A-Za-z\s]+$/; // Regular expression for text input
+
+      if (!textRegex.test(supplier)) {
+        alert("Please enter a valid supplier name (only alphabets and spaces).");
+        return false;
+      }
+
+      if (!textRegex.test(itemName)) {
+        alert("Please enter a valid item name (only alphabets and spaces).");
+        return false;
+      }
+
+      if (!textRegex.test(itemType)) {
+        alert("Please enter a valid item type (only alphabets and spaces).");
+        return false;
+      }
+
+      // Validate volume, quantity, minimum quantity, unit price, and discount (accepts positive numbers and floats)
+      var volume = parseFloat(document.getElementById("volume").value);
+      var quantity = parseInt(document.getElementById("quantity").value);
+      var minQty = parseInt(document.getElementById("minqty").value);
+      var unitPrice = parseFloat(document.getElementById("unitprice").value);
+      var discount = parseFloat(document.getElementById("discount").value);
+
+      if (isNaN(volume) || volume <= 0) {
+        alert("Please enter a valid volume (a positive number).");
+        return false;
+      }
+
+      if (isNaN(quantity) || quantity <= 0) {
+        alert("Please enter a valid quantity (a positive number).");
+        return false;
+      }
+
+      if (isNaN(minQty) || minQty <= 0) {
+        alert("Please enter a valid minimum quantity (a positive number).");
+        return false;
+      }
+
+      if (isNaN(unitPrice) || unitPrice <= 0) {
+        alert("Please enter a valid unit price (a positive number).");
+        return false;
+      }
+
+      if (isNaN(discount) || discount < 0) {
+        alert("Please enter a valid discount (a non-negative number).");
+        return false;
+      }
+
+      // All validations passed
+      return true;
+    }
+  </script>
+
+</body>
+
+</html>

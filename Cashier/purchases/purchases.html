@@ -1,0 +1,113 @@
+<!-- purchase_items.php -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Purchase Items</title>
+    <link rel="stylesheet" href="purchases.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="../cashier.php">Cashier Panel</a>
+        <a href="../billing/billing.php">Billing</a>
+        <a href="../Stock/stock.html">Stock</a>
+        <a href="../purchases/purchases.html">Purchases</a>
+        <span class="log-out"><a href="../../login/logout.php">Log Out</a></span>
+
+    </nav>
+
+    <div class="add-new-item">
+        <h1>Purchase Items</h1>
+        <a href="../Stock/addStock/addstock.html">Add New Item to The Stock</a>
+        <a href="../Stock/viewStock/viewstock.php">View Current Stock</a>
+    </div>
+
+
+    <form action="purchasing.php" method="post">
+        <label for="supplier_id">Supplier ID:</label>
+        <input type="text" name="supplier_id" id="supplier_id" required><br>
+
+        <label for="item_code">Item Code:</label>
+        <input type="text" name="item_code" id="item_code" required><br>
+
+        <label for="item_name">Item Name:</label>
+        <input type="text" name="item_name" id="item_name" required><br>
+
+        <label for="item_type">Item Type:</label>
+        <input type="text" name="item_type" id="item_type" required><br>
+
+        <label for="volume">Volume:</label>
+        <input type="text" name="volume" id="volume" required><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="text" name="quantity" id="quantity" required><br>
+
+        <label for="unit_price">Unit Price:</label>
+        <input type="text" name="unit_price" id="unit_price" required><br>
+
+        <label for="discount">Discount:</label>
+        <input type="text" name="discount" id="discount" required><br>
+
+        <label for="cost">Cost:</label>
+        <input type="text" name="cost" id="cost" required><br>
+
+        <label for="description">Description:</label>
+        <textarea name="description" id="description"></textarea><br>
+
+        <input type="submit" value="Purchase Item">
+    </form>
+
+    <script src="purchasing.js"></script>
+
+    <script>
+        function validateForm() {
+            // Validate item name and item type (accepts only text)
+            var itemName = document.getElementById("item_name").value;
+            var itemType = document.getElementById("item_type").value;
+            var textRegex = /^[A-Za-z\s]+$/; // Regular expression for text input
+
+            if (!textRegex.test(itemName)) {
+                alert("Please enter a valid item name (only alphabets and spaces).");
+                return false;
+            }
+
+            if (!textRegex.test(itemType)) {
+                alert("Please enter a valid item type (only alphabets and spaces).");
+                return false;
+            }
+
+            // Validate volume, quantity, unit price, and discount (accepts positive numbers and floats)
+            var volume = parseFloat(document.getElementById("volume").value);
+            var quantity = parseFloat(document.getElementById("quantity").value);
+            var unitPrice = parseFloat(document.getElementById("unit_price").value);
+            var discount = parseFloat(document.getElementById("discount").value);
+
+            if (isNaN(volume) || volume <= 0) {
+                alert("Please enter a valid volume (a positive number).");
+                return false;
+            }
+
+            if (isNaN(quantity) || quantity <= 0) {
+                alert("Please enter a valid quantity (a positive number).");
+                return false;
+            }
+
+            if (isNaN(unitPrice) || unitPrice <= 0) {
+                alert("Please enter a valid unit price (a positive number).");
+                return false;
+            }
+
+            if (isNaN(discount) || discount < 0) {
+                alert("Please enter a valid discount (a non-negative number).");
+                return false;
+            }
+
+            // All validations passed
+            return true;
+        }
+    </script>
+</body>
+
+</html>

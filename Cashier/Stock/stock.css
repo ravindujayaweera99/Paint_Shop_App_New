@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../../images/background.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  height: 100vh;
+  background-color: rgba(182, 204, 161, 0.7);
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border: 2px solid rgb(255, 255, 255);
+  margin-right: 10px;
+  padding: 15px;
+  background-color: rgb(48, 1, 30);
+  font-size: 15px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  background-color: rgb(215, 252, 212);
+  color: rgb(48, 1, 30);
+}
+
+nav>span {
+  margin-top: 25px;
+}
+
+nav span>a {
+  background-color: rgb(255, 0, 0);
+}
+
+nav span>a:hover {
+  background-color: rgb(98, 6, 6);
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.container{
+  display: grid;
+  place-items: center;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons{
+  margin-top: 2%;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.buttons a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border: 2px solid rgb(255, 255, 255);
+  margin-right: 10px;
+  padding: 25px;
+  background-color:  rgb(48, 1, 30);
+  font-size: 15px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  font-weight: 700;
+}
+
+.buttons a:hover {
+  background-color:  rgb(255, 255, 255);
+  color: rgb(48, 1, 30);
+  font-weight: 700;
+}
+
+.footer {
+  background-color: rgb(48, 1, 30);
+  height: 100px;
+  margin-top: 100px;
+  display: grid;
+  place-items: center;
+}
+
+.footer h3 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.bc {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  background-color: rgb(48, 1, 30);
+}
+
+.header h3 {
+  margin-left: 600px;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+}

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+  display: flex;
+  flex-direction: row;
+  background-image: url(../../images/background-2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 15px;
+  background-color: rgb(12, 2, 34);
+  border-radius: 15px;
+  margin-top: 5px;
+}
+
+nav a:hover {
+  background-color: blue;
+}
+
+nav > span {
+  margin-top: 25px;
+}
+
+nav span > a {
+  background-color: rgb(255, 0, 0);
+}
+nav span > a:hover {
+  background-color: rgb(98, 6, 6);
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: #fff;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+input[type="text"] {
+  width: 75%;
+  padding: 5px;
+  margin: 5px 0 5px 0;
+  display: block;
+  border: none;
+  background: #dadada;
+  font-weight: bolder;
+  color: black;
+  border: 2px solid black;
+}
+
+input[type="text"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: rgb(13, 13, 124);
+  padding: 15px;
+  color: white;
+  margin-top: 15px;
+  width: 30%;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(3, 3, 55);
+  color: white;
+}
+
+.add-new-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-new-item a {
+  color: white;
+  text-decoration: none;
+  border: 2px solid rgb(255, 255, 255);
+  margin-right: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: rgb(143, 10, 10);
+}

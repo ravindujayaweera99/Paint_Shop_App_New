@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../../images/background.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bc {
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  height: 100vh;
+  background-color: rgba(182, 204, 161, 0.7);
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border: 2px solid rgb(255, 255, 255);
+  margin-right: 10px;
+  padding: 15px;
+  background-color: rgb(48, 1, 30);
+  font-size: 15px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  background-color: rgb(215, 252, 212);
+  color: rgb(48, 1, 30);
+}
+
+nav>span {
+  margin-top: 25px;
+}
+
+nav span>a {
+  background-color: rgb(255, 0, 0);
+}
+
+nav span>a:hover {
+  background-color: rgb(98, 6, 6);
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  width: 600px;
+  height: fit-content;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  background-color: rgb(48, 1, 30);
+  color: rgb(255, 255, 255);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="decimal"],
+select {
+  width: 75%;
+  padding: 15px;
+  margin: 5px 0 15px 0;
+  display: block;
+  border: none;
+  background: #dadada;
+  font-weight: bolder;
+  color: black;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="decimal"]:focus,
+select:focus {
+  background-color: #ffffff;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: rgba(160, 3, 100);
+  color: rgb(255, 255, 255);
+  margin-top: 15px;
+  width: 30%;
+  font-weight: 700;
+  border-radius: 15px;
+  margin: 25px;
+  height: 50px;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(141, 0, 87);
+  color: rgba(182, 204, 161);
+}
+
+button {
+  background-color: rgb(185, 25, 25);
+  color: rgb(255, 255, 255);
+  margin-top: 15px;
+  width: 30%;
+  font-weight: 700;
+  border-radius: 15px;
+  height: 50px;
+  margin-left: 210px;
+}
+
+button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button:hover {
+  background-color: rgb(141, 0, 0);
+  color: rgba(182, 204, 161);
+}
+
+.header {
+  background-color: rgb(48, 1, 30);
+}
+
+h2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  padding: 5px;
+}
+
+.footer {
+  background-color: rgb(48, 1, 30);
+  height: 100px;
+  margin-top: 140px;
+  display: grid;
+  place-items: center;
+}
+
+.footer h3 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}

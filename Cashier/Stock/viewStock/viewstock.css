@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../../../images/background.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  height: 100vh;
+  background-color: rgba(182, 204, 161, 0.7);
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border: 2px solid rgb(255, 255, 255);
+  margin-right: 10px;
+  padding: 15px;
+  background-color: rgb(48, 1, 30);
+  font-size: 15px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  background-color: rgb(215, 252, 212);
+  color: rgb(48, 1, 30);
+}
+
+nav>span {
+  margin-top: 25px;
+}
+
+nav span>a {
+  background-color: rgb(255, 0, 0);
+}
+
+nav span>a:hover {
+  background-color: rgb(98, 6, 6);
+}
+
+table {
+  margin-top: 30px;
+  color: #000000;
+  width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  height: fit-content;
+}
+
+td {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 5px;
+}
+
+th {
+  text-align: center;
+  color: blue;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.footer {
+  background-color: rgb(48, 1, 30);
+  height: 100px;
+  margin-top: 100px;
+  display: grid;
+  place-items: center;
+}
+
+.footer h3 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.bc {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  background-color: rgb(48, 1, 30);
+}
+
+.header h3 {
+  margin-left: 600px;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+}
+
+   /*=======================================================================================/*
+
+    /*Below Field Added by Pulasthi Tharaka*/
+
+div button {
+  background-color: rgb(143, 10, 10);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+div input {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-left: 30px;
+}

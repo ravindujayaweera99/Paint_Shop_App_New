@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../../images/background.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  height: 100vh;
+  background-color: rgba(182, 204, 161, 0.7);
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border: 2px solid rgb(255, 255, 255);
+  margin-right: 10px;
+  padding: 15px;
+  background-color: rgb(48, 1, 30);
+  font-size: 15px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  background-color: rgb(215, 252, 212);
+  color: rgb(48, 1, 30);
+}
+
+nav>span {
+  margin-top: 25px;
+}
+
+nav span>a {
+  background-color: rgb(255, 0, 0);
+}
+
+nav span>a:hover {
+  background-color: rgb(98, 6, 6);
+}
+
+h2 {
+  text-align: center;
+}
+
+.bc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-section {
+  background-color: rgb(48, 1, 30);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.hc {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  background-color: rgb(48, 1, 30);
+}
+
+.header h3 {
+  margin-left: 600px;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+}
+
+table {
+  margin-top: 50px;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid black;
+  background-color: white;
+}
+
+th {
+  color: rgb(48, 1, 30);
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.bc > h2 {
+  text-align: center;
+  font-size: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 50px;
+  justify-content: center;
+  background-color: rgb(48, 1, 30);
+  color: rgb(255, 255, 255);
+}
+
+.customer-details,
+.item-details {
+  margin-right: 25px;
+  margin-bottom: 50px;
+  margin-left: 25px;
+}
+
+.item-details {
+  margin-top: 50px;
+}
+
+.customer-details {
+  margin-top: 50px;
+  display: block;
+}
+
+
+#add-item {
+  background-color: rgba(160, 3, 100);
+  color: rgb(255, 255, 255);
+  margin-top: 15px;
+  width: 100%;
+  font-weight: 700;
+  border-radius: 15px;
+  margin: 25px;
+  height: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 215px;
+}
+
+#totalSection {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#totalSection label {
+  margin-top: 16px;
+  font-weight: bold;
+  margin-left: 25px;
+}
+
+#totalSection input {
+  margin-top: 25px;
+  margin-right: 100px;
+  width: 100px;
+  height: 20px;
+}
+
+#totalSection button {
+  background-color: rgba(160, 3, 100);
+  color: rgb(255, 255, 255);
+  margin-top: 15px;
+  width: 100%;
+  font-weight: 700;
+  border-radius: 15px;
+  margin: 25px;
+  height: 50px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#totalSection h3,
+#totalSection h4 {
+  margin-top: 15px;
+  margin-right: 100px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="integer"],
+input[type="decimal"],
+select {
+  font-weight: bolder;
+}
+
+.footer {
+  background-color: rgb(48, 1, 30);
+  height: 100px;
+  margin-top: 100px;
+  display: grid;
+  place-items: center;
+}
+
+.footer h3 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+select {
+  width: fit-content;
+  height: fit-content;
+  padding: 15px;
+  margin: 5px 0 15px 0;
+  display: block;
+  border: none;
+  background: #dadada;
+  font-weight: bolder;
+  color: black;
+}
+
+button {
+  background-color: rgb(143, 10, 10);
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  form {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .customer-details,
+  .item-details {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  #totalSection {
+    flex-direction: column;
+    width: 80%;
+  }
+}
+
+/* Media Query for screens between 768px and 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  table {
+    font-size: 16px;
+  }
+
+  form {
+    width: 70%;
+  }
+
+  .customer-details,
+  .item-details {
+    margin-right: 10px;
+    margin-bottom: 40px;
+  }
+
+  #totalSection {
+    width: 70%;
+  }
+}
+
+/* Media Query for screens between 1024px and 1247px */
+@media (min-width: 1024px) and (max-width: 1247px) {
+  table {
+    font-size: 18px;
+  }
+
+  form {
+    width: 60%;
+  }
+
+  .customer-details,
+  .item-details {
+    margin-right: 15px;
+    margin-bottom: 50px;
+  }
+
+  #totalSection {
+    width: 60%;
+  }
+}
+
+/* Media Query for screens between 1248px and 1511px */
+@media (min-width: 1248px) and (max-width: 1511px) {
+  table {
+    font-size: 20px;
+  }
+
+  form {
+    width: 50%;
+  }
+
+  .customer-details,
+  .item-details {
+    margin-right: 20px;
+    margin-bottom: 60px;
+  }
+
+  #totalSection {
+    width: 50%;
+  }
+}
+
+/* Media Query for screens larger than or equal to 1512px */
+@media (min-width: 1512px) {
+  table {
+    font-size: 22px;
+  }
+
+  form {
+    width: 40%;
+  }
+
+  .customer-details,
+  .item-details {
+    margin-right: 25px;
+    margin-bottom: 70px;
+  }
+
+  #totalSection {
+    width: 40%;
+  }
+}

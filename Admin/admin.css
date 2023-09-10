@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background-image: url(../images/background.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  rgb(48, 1, 30);
+    height: 100px;
+}
+
+.header > .bell > a {
+    margin-right: 25px;
+    padding-left: 25px;
+    text-decoration: none;
+    color: #ff0000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.bell {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    border: 2px solid red;
+}
+
+.header > .bell > img {
+    height: 30px;
+    width: 30px;
+    margin-right: 25px;
+}
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+h4 {
+    border: 2px solid red;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    margin-left: 25px;
+    padding: 15px;
+}
+
+h3{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    margin-left: 25px;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttons{
+    margin-top: 2%;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.buttons a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 2px solid rgb(255, 255, 255);
+    margin-right: 10px;
+    padding: 25px;
+    background-color:  rgb(48, 1, 30);
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 15px;
+    font-weight: 700;
+}
+
+.buttons a:hover {
+    background-color:  rgb(255, 255, 255);
+    color: rgb(48, 1, 30);
+    font-weight: 700;
+}
+
+.log-out a {
+    color: white;
+    text-decoration: none;
+    border: 2px solid rgb(255, 255, 255);
+    margin-right: 10px;
+    padding: 25px;
+    background-color: rgb(98, 6, 6);
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.log-out a:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.footer {
+    background-color:  rgb(48, 1, 30);
+    height: 100px;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer h3 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+
+
+  
